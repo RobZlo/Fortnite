@@ -9,6 +9,10 @@ public class BuildingController : MonoBehaviour
     RaycastHit hit;
     public GameObject ground;
     public GameObject player;
+    public GameObject groundLayout;
+    private GameObject layoutContrainer;
+    private Vector3 layoutVector;
+    private bool VectorSet = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +26,38 @@ public class BuildingController : MonoBehaviour
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if(Physics.Raycast(ray, out hit))
         {
+            if(hit.distance >= 10)
+            {
+                Destroy(layoutContrainer);
+                VectorSet = false;
+            }
+
+            if (layoutVector != hit.point && VectorSet)
+            {
+                layoutContrainer.transform.position = hit.point;
+                layoutContrainer.transform.rotation = player.transform.rotation;
+            }
+            if(hit.distance < 10 && !VectorSet)
+            {
+                layoutContrainer = Instantiate(groundLayout, hit.point, player.transform.rotation);
+                layoutVector = hit.point;
+                VectorSet = true;
+            }
+
             if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
+                Destroy(layoutContrainer);
+                VectorSet = false;
             }
+
+            if(hit.distance < 10 && hit.collider.gameObject.tag == "Component")
+            {
+                Destroy(layoutContrainer);
+                VectorSet = false;
+            }
+
+
 
             if(Input.GetMouseButtonDown(0) && hit.distance < 10)
             {
