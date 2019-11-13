@@ -59,17 +59,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (objInHand != null)
-            {
-                objInHand.transform.parent = null;
-                objInHand.GetComponent<Rigidbody>().isKinematic = false;
-                objInHand.GetComponent<Rigidbody>().AddForce(cam.transform.forward * throwForce);
-                objInHand = null;
-
-            }
-        }
+       
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (Time.timeScale == 1f)

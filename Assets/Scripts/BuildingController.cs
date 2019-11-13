@@ -22,7 +22,7 @@ public class BuildingController : MonoBehaviour
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if(Physics.Raycast(ray, out hit))
         {
-            if(hit.distance < 10 && hit.collider.gameObject.tag == "Layout")
+            if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
             }
