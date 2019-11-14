@@ -86,6 +86,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\BuildingController.cs" />
+    <Compile Include="Assets\Scripts\Component.cs" />
     <Compile Include="Assets\Scripts\Layout.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
