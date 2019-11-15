@@ -92,6 +92,8 @@ public class BuildingController : MonoBehaviour
             if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
+                hit.collider.gameObject.GetComponent<Layout>().component.modus = modus;
+                //hit.collider.gameObject.transform.parent.gameObject.GetComponent<Component>().modus = modus;
                 Destroy(layoutContrainer);
                 VectorSet = false;
             }
@@ -114,7 +116,7 @@ public class BuildingController : MonoBehaviour
                 else if(hit.collider.gameObject.tag == "Layout")
                 {
                     GameObject container;
-                    container = Instantiate(ground, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+                    container = Instantiate(component, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
                 }
                 else
                 {
