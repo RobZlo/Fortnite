@@ -7,7 +7,7 @@ public class Layout : MonoBehaviour
     public Material material1;
     public Material material2;
     public bool tracked;
-    public Component component;
+    public BuildingObject buildingObject;
 
     // Start is called before the first frame update
     void Start()

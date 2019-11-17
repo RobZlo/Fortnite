@@ -9,7 +9,7 @@ public class BuildingController : MonoBehaviour
     Ray ray;
     RaycastHit hit;
     public GameObject player;
-    public GameObject component;
+    public GameObject buildingObject;
     public GameObject ground;   
     public GameObject groundLayout;
     public GameObject ramp;
@@ -26,7 +26,7 @@ public class BuildingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        component = ground;
+        buildingObject = ground;
         layout = groundLayout;
         modus = 0;
         imageGround.color = Color.green;
@@ -42,7 +42,7 @@ public class BuildingController : MonoBehaviour
             imageGround.color = Color.green;
             imageRamp.color = Color.white;
             imageWall.color = Color.white;
-            component = ground;
+            buildingObject = ground;
             layout = groundLayout;
             Destroy(layoutContrainer);
             VectorSet = false;
@@ -53,7 +53,7 @@ public class BuildingController : MonoBehaviour
             imageGround.color = Color.white;
             imageRamp.color = Color.green;
             imageWall.color = Color.white;
-            component = ramp;
+            buildingObject = ramp;
             layout = rampLayout;
             Destroy(layoutContrainer);
             VectorSet = false;
@@ -92,15 +92,14 @@ public class BuildingController : MonoBehaviour
             if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
-                hit.collider.gameObject.GetComponent<Layout>().component.modus = modus;
-                //hit.collider.gameObject.transform.parent.gameObject.GetComponent<Component>().modus = modus;
+                hit.collider.gameObject.GetComponent<Layout>().buildingObject.modus = modus;
                 Destroy(layoutContrainer);
                 VectorSet = false;
             }
 
-            if(hit.distance < 10 && hit.collider.gameObject.tag == "Component")
+            if(hit.distance < 10 && hit.collider.gameObject.tag == "BuildingObject")
             {
-                hit.collider.gameObject.GetComponent<Component>().modus = modus;
+                hit.collider.gameObject.GetComponent<BuildingObject>().modus = modus;
                 Destroy(layoutContrainer);
                 VectorSet = false;
             }
@@ -109,18 +108,18 @@ public class BuildingController : MonoBehaviour
 
             if(Input.GetMouseButtonDown(0) && hit.distance < 10)
             {
-                if(hit.collider.gameObject.tag == "Component")
+                if(hit.collider.gameObject.tag == "BuildingObject")
                 {
 
                 }
                 else if(hit.collider.gameObject.tag == "Layout")
                 {
                     GameObject container;
-                    container = Instantiate(component, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+                    container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
                 }
                 else
                 {
-                    Instantiate(component, hit.point, player.transform.rotation);
+                    Instantiate(buildingObject, hit.point, player.transform.rotation);
                 }
             }
         }
