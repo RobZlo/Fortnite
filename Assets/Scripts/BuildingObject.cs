@@ -15,6 +15,11 @@ public class BuildingObject : MonoBehaviour
     public GameObject layoutRamp3;
     public GameObject layoutRamp4;
 
+    public GameObject layoutWall1;
+    public GameObject layoutWall2;
+    public GameObject layoutWall3;
+    public GameObject layoutWall4;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +40,11 @@ public class BuildingObject : MonoBehaviour
                     layoutRamp2.SetActive(false);
                     layoutRamp3.SetActive(false);
                     layoutRamp4.SetActive(false);
-                    break;
+                    layoutWall1.SetActive(false);
+                    layoutWall2.SetActive(false);
+                    layoutWall3.SetActive(false);
+                    layoutWall4.SetActive(false);
+                break;
             case 1:
                     layoutGround1.SetActive(false);
                     layoutGround2.SetActive(false);
@@ -45,7 +54,25 @@ public class BuildingObject : MonoBehaviour
                     layoutRamp2.SetActive(true);
                     layoutRamp3.SetActive(true);
                     layoutRamp4.SetActive(true);
-                    break;
+                    layoutWall1.SetActive(false);
+                    layoutWall2.SetActive(false);
+                    layoutWall3.SetActive(false);
+                    layoutWall4.SetActive(false);
+                break;
+            case 2:
+                layoutGround1.SetActive(false);
+                layoutGround2.SetActive(false);
+                layoutGround3.SetActive(false);
+                layoutGround4.SetActive(false);
+                layoutRamp1.SetActive(false);
+                layoutRamp2.SetActive(false);
+                layoutRamp3.SetActive(false);
+                layoutRamp4.SetActive(false);
+                layoutWall1.SetActive(true);
+                layoutWall2.SetActive(true);
+                layoutWall3.SetActive(true);
+                layoutWall4.SetActive(true);
+                break;
         }
     }
 }

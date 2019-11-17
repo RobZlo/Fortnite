@@ -10,10 +10,12 @@ public class BuildingController : MonoBehaviour
     RaycastHit hit;
     public GameObject player;
     public GameObject buildingObject;
-    public GameObject ground;   
+    public GameObject ground;
     public GameObject groundLayout;
     public GameObject ramp;
     public GameObject rampLayout;
+    public GameObject wall;
+    public GameObject wallLayout;
     public GameObject layout;
     public Image imageGround;
     public Image imageRamp;
@@ -64,6 +66,10 @@ public class BuildingController : MonoBehaviour
             imageGround.color = Color.white;
             imageRamp.color = Color.white;
             imageWall.color = Color.green;
+            buildingObject = wall;
+            layout = wallLayout;
+            Destroy(layoutContrainer);
+            VectorSet = false;
         }
 
    
