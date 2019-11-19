@@ -121,7 +121,19 @@ public class BuildingController : MonoBehaviour
                 else if(hit.collider.gameObject.tag == "Layout")
                 {
                     GameObject container;
-                    container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+                    
+                    if(modus == 2)
+                    {
+                        container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+                        if(!hit.collider.gameObject.transform.parent.gameObject.name.Equals("Wall"))
+                        {
+                            container.transform.Rotate(0, 0, 90);
+                        }
+                    }
+                    else
+                    {
+                        container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+                    }
                 }
                 else
                 {
