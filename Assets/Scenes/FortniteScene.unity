@@ -23005,7 +23005,7 @@ MonoBehaviour:
   ground: {fileID: 4352918615756804176, guid: ace04f9fb07069544a67671666389d2a, type: 3}
   groundLayout: {fileID: 6394633019122217624, guid: f9cd73206d44b314dae2723a253652ff,
     type: 3}
-  ramp: {fileID: 150233558647080, guid: 1eba519608b01d443970415b1f293c60, type: 3}
+  ramp: {fileID: 150233558647080, guid: 55c7c13cf6fe2484cae02c5663f13972, type: 3}
   rampLayout: {fileID: 6834019610312647265, guid: 5e7d74c37c362f6469adadb2e38a96a3,
     type: 3}
   wall: {fileID: 1571557142985126986, guid: 894470f64340ae64aa5e21b391d2794f, type: 3}

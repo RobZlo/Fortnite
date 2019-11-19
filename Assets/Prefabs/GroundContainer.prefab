@@ -816,10 +816,10 @@ MonoBehaviour:
   layoutRamp2: {fileID: 4352918617018707706}
   layoutRamp3: {fileID: 8963512799653585931}
   layoutRamp4: {fileID: 4576286164451563153}
-  layoutWall1: {fileID: 0}
-  layoutWall2: {fileID: 0}
-  layoutWall3: {fileID: 0}
-  layoutWall4: {fileID: 0}
+  layoutWall1: {fileID: 1724928852}
+  layoutWall2: {fileID: 2033087668}
+  layoutWall3: {fileID: 912225388}
+  layoutWall4: {fileID: 24721445}
 --- !u!1 &8963512799653585931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,17 +1005,17 @@ PrefabInstance:
       propertyPath: buildingObject
       value: 
       objectReference: {fileID: 754884540}
-    - target: {fileID: 7053687291752252971, guid: 978bb4084a7884a40ba161f882e219fb,
-        type: 3}
-      propertyPath: buildingObject
-      value: 
-      objectReference: {fileID: 754884540}
     - target: {fileID: 6697390278056446098, guid: 978bb4084a7884a40ba161f882e219fb,
         type: 3}
       propertyPath: buildingObject
       value: 
       objectReference: {fileID: 754884540}
     - target: {fileID: 4795313140935404988, guid: 978bb4084a7884a40ba161f882e219fb,
+        type: 3}
+      propertyPath: buildingObject
+      value: 
+      objectReference: {fileID: 754884540}
+    - target: {fileID: 7053687291752252971, guid: 978bb4084a7884a40ba161f882e219fb,
         type: 3}
       propertyPath: buildingObject
       value: 
