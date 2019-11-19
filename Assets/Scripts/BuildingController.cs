@@ -129,11 +129,13 @@ public class BuildingController : MonoBehaviour
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(0, 90, -45);
+                        gameObjectInstance.transform.Translate(-2.5f, 0, 0);
                     }
                     else if(modus == 2)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(90, 0, 0);
+                        gameObjectInstance.transform.Translate(0,0,-2.5f);
                     }
                     else
                     {
