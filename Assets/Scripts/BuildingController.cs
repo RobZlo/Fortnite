@@ -125,10 +125,22 @@ public class BuildingController : MonoBehaviour
                 }
                 else
                 {
-                    Instantiate(buildingObject, hit.point, player.transform.rotation);
+                    if(modus == 1)
+                    {
+                        GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
+                        gameObjectInstance.transform.Rotate(0, 90, -45);
+                    }
+                    else if(modus == 2)
+                    {
+                        GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
+                        gameObjectInstance.transform.Rotate(90, 0, 0);
+                    }
+                    else
+                    {
+                        Instantiate(buildingObject, hit.point, player.transform.rotation);
+                    }
                 }
             }
         }
-        
     }
 }

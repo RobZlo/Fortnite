@@ -107,7 +107,7 @@ MonoBehaviour:
   material1: {fileID: 2100000, guid: 7eda7b0d58cc1f2408d5aa2fc6ed1f53, type: 2}
   material2: {fileID: 2100000, guid: 0112d7feeb7b0c442b0ee3d443f7cca8, type: 2}
   tracked: 0
-  buildingObject: {fileID: 0}
+  buildingObject: {fileID: 3001621174686530470}
 --- !u!1 &263988377
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   material1: {fileID: 2100000, guid: 7eda7b0d58cc1f2408d5aa2fc6ed1f53, type: 2}
   material2: {fileID: 2100000, guid: 0112d7feeb7b0c442b0ee3d443f7cca8, type: 2}
   tracked: 0
-  buildingObject: {fileID: 0}
+  buildingObject: {fileID: 3001621174686530470}
 --- !u!1 &1248987831
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   material1: {fileID: 2100000, guid: 7eda7b0d58cc1f2408d5aa2fc6ed1f53, type: 2}
   material2: {fileID: 2100000, guid: 0112d7feeb7b0c442b0ee3d443f7cca8, type: 2}
   tracked: 0
-  buildingObject: {fileID: 0}
+  buildingObject: {fileID: 3001621174686530470}
 --- !u!1 &1278329449
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
   material1: {fileID: 2100000, guid: 7eda7b0d58cc1f2408d5aa2fc6ed1f53, type: 2}
   material2: {fileID: 2100000, guid: 0112d7feeb7b0c442b0ee3d443f7cca8, type: 2}
   tracked: 0
-  buildingObject: {fileID: 0}
+  buildingObject: {fileID: 3001621174686530470}
 --- !u!1 &1571557142985126986
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,14 +510,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modus: 0
-  layoutGround1: {fileID: 6723279215211660271}
-  layoutGround2: {fileID: 6723279216409612303}
-  layoutGround3: {fileID: 6723279215846231068}
-  layoutGround4: {fileID: 6723279215020789208}
+  layoutGround1: {fileID: 35134819}
+  layoutGround2: {fileID: 1248987831}
+  layoutGround3: {fileID: 263988377}
+  layoutGround4: {fileID: 2108690293}
   layoutRamp1: {fileID: 1278329449}
   layoutRamp2: {fileID: 1278329449}
   layoutRamp3: {fileID: 1278329449}
   layoutRamp4: {fileID: 1278329449}
+  layoutWall1: {fileID: 6723279215211660271}
+  layoutWall2: {fileID: 6723279216409612303}
+  layoutWall3: {fileID: 6723279215846231068}
+  layoutWall4: {fileID: 6723279215020789208}
 --- !u!1001 &1571557144286357808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,17 +599,17 @@ PrefabInstance:
       propertyPath: buildingObject
       value: 
       objectReference: {fileID: 3001621174686530470}
-    - target: {fileID: 7053687291752252971, guid: 978bb4084a7884a40ba161f882e219fb,
-        type: 3}
-      propertyPath: buildingObject
-      value: 
-      objectReference: {fileID: 3001621174686530470}
     - target: {fileID: 6697390278056446098, guid: 978bb4084a7884a40ba161f882e219fb,
         type: 3}
       propertyPath: buildingObject
       value: 
       objectReference: {fileID: 3001621174686530470}
     - target: {fileID: 4795313140935404988, guid: 978bb4084a7884a40ba161f882e219fb,
+        type: 3}
+      propertyPath: buildingObject
+      value: 
+      objectReference: {fileID: 3001621174686530470}
+    - target: {fileID: 7053687291752252971, guid: 978bb4084a7884a40ba161f882e219fb,
         type: 3}
       propertyPath: buildingObject
       value: 
