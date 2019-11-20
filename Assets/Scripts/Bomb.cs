@@ -14,6 +14,7 @@ public class Bomb : MonoBehaviour
     public float farAreaEffect = 5f;
     public LayerMask interactionMask;
     public GameObject explosionEffectPrefab;
+    private GameObject explosionEffectInstance;
 
 
     // Use this for initialization
@@ -30,7 +31,7 @@ public class Bomb : MonoBehaviour
         foreach (Collider c in hitColliders)
         {
             // It is possible to destroy objects with either the Building Block or the Tree tag
-            if (c.gameObject.tag == "Building Block" || c.gameObject.tag == "Tree")
+            if (c.gameObject.tag == "BuildingObject" || c.gameObject.tag == "Tree")
             {
                 //Calculate distance between bomb and collider
                 float distance = Vector3.Distance(c.transform.position, transform.position);
@@ -44,11 +45,13 @@ public class Bomb : MonoBehaviour
                     }
                     else if (distance <= mediumAreaEffect)
                     {
-                        health.CalculateDamage(50);
+                        //50
+                        health.CalculateDamage(100);
                     }
                     else if (distance <= farAreaEffect)
                     {
-                        health.CalculateDamage(20);
+                        //20
+                        health.CalculateDamage(100);
                     }
                 }
             }
@@ -59,7 +62,7 @@ public class Bomb : MonoBehaviour
             }
         }
 
-        Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+        explosionEffectInstance = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         gameObject.GetComponent<AudioSource>().Play();
         gameObject.GetComponent<Renderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
@@ -68,6 +71,7 @@ public class Bomb : MonoBehaviour
 
     void kill()
     {
+        Destroy(explosionEffectInstance);
         Destroy(gameObject);
     }
 }
