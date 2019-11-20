@@ -110,10 +110,14 @@ MonoBehaviour:
   explosionForce: 1000
   explosionRadius: 10
   upModifier: 100
+  closeAreaEffect: 1.5
+  mediumAreaEffect: 3
+  farAreaEffect: 5
   interactionMask:
     serializedVersion: 2
     m_Bits: 512
-  particlePrefab: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
+  explosionEffectPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+    type: 3}
 --- !u!54 &54222284867673030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +145,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f7a3be0ac9e723458138c9799093590, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

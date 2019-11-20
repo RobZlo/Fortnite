@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Camera\Editor\v3rdPersonCameraEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\CharacterController\Editor\vCharacterEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\CharacterController\Editor\vThirdPersonInputEditor.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ParameterWindow.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_Preferences.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ToggleContent.cs" />
+    <None Include="Assets\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
     <Reference Include="Unity.ProBuilder">
       <HintPath>C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
     </Reference>
@@ -347,6 +349,9 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="PackageManagerAssembly">
+      <HintPath>C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
