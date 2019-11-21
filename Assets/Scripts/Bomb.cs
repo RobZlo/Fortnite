@@ -27,7 +27,7 @@ public class Bomb : MonoBehaviour
     void explode()
     {
 
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius, interactionMask);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider c in hitColliders)
         {
             // It is possible to destroy objects with either the Building Block or the Tree tag

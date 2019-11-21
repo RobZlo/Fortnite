@@ -134,6 +134,8 @@ public class BuildingController : MonoBehaviour
                     {
                         container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
                     }
+
+                    container.transform.SetParent(hit.collider.gameObject.transform.parent);
                 }
                 else
                 {

@@ -9,6 +9,7 @@ TagManager:
   - Component
   - BuildingObject
   - Tree
+  - Floor
   layers:
   - Default
   - TransparentFX

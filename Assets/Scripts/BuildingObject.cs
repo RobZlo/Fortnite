@@ -20,7 +20,13 @@ public class BuildingObject : MonoBehaviour
     public GameObject layoutWall3;
     public GameObject layoutWall4;
 
-
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag.Equals("Floor"))
+        {
+            this.transform.parent = null;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

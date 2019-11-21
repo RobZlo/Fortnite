@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 5224774340578515893}
   - component: {fileID: 5224774340578515892}
   - component: {fileID: 4352769488803172036}
+  - component: {fileID: 5521172036385178292}
   m_Layer: 0
   m_Name: Ramp
   m_TagString: BuildingObject
@@ -509,6 +510,19 @@ MonoBehaviour:
   layoutWall2: {fileID: 2586626495761110354}
   layoutWall3: {fileID: 2586626495761110354}
   layoutWall4: {fileID: 2586626495761110354}
+--- !u!114 &5521172036385178292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5224774340578515899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75972143ab59f842822f25c40cde82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &5224774340714833261
 GameObject:
   m_ObjectHideFlags: 0
