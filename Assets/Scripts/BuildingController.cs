@@ -23,64 +23,45 @@ public class BuildingController : MonoBehaviour
     private GameObject layoutContainer;
     private Vector3 layoutVector;
     private bool VectorSet = false;
+    private bool buildModeOn = false;
     private int mode = 0;
 
-    public GameObject bulletPrefab;
-    public Transform bulletSpawn;
-    int bulletsExists = 0;
+    public int bulletsExists = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        buildingObject = ground;
-        layout = groundLayout;
-        mode = 0;
-        imageGround.color = Color.green;
+ 
     }
 
     //Takes care of the shooting mechanism
 
-    private void Fire()
-    {
-        // Create the Bullet from the Bullet Prefab
-        var bullet = (GameObject)Instantiate(
-            bulletPrefab,
-            bulletSpawn.position,
-            bulletSpawn.rotation);
+    
 
-        bullet.GetComponent<AudioSource>().Play();
-
-        bulletsExists += 1;
-
-        // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
-
-        // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
-
-        Invoke("destroyBullet", 2.0f);
-        
-        
-    }
-
-    private void destroyBullet()
-    {
-        bulletsExists -= 1;
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+            buildModeOn = false;
             Destroy(layoutContainer);
             VectorSet = false;
-            Fire();
+         
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            buildModeOn = false;
+            Destroy(layoutContainer);
+            VectorSet = false;
         }
 
         // Condition which modus is activated to hitmark the image in the Panel
         if (Input.GetKey(KeyCode.F1))
         {
+            buildModeOn = true;
             mode = 0;
             imageGround.color = Color.green;
             imageRamp.color = Color.white;
@@ -92,6 +73,7 @@ public class BuildingController : MonoBehaviour
         }
         else if(Input.GetKey(KeyCode.F2))
         {
+            buildModeOn = true;
             mode = 1;
             imageGround.color = Color.white;
             imageRamp.color = Color.green;
@@ -103,6 +85,7 @@ public class BuildingController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.F3))
         {
+            buildModeOn = true;
             mode = 2;
             imageGround.color = Color.white;
             imageRamp.color = Color.white;
@@ -129,14 +112,14 @@ public class BuildingController : MonoBehaviour
                 layoutContainer.transform.position = hit.point;
                 layoutContainer.transform.rotation = player.transform.rotation;
             }
-            if(hit.distance < 10 && !VectorSet  && bulletsExists == 0)
+            if(hit.distance < 10 && !VectorSet  && bulletsExists == 0 && buildModeOn == true)
             {
                 layoutContainer = Instantiate(layout, hit.point, player.transform.rotation);
                 layoutVector = hit.point;
                 VectorSet = true;
             }
 
-            if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10 && bulletsExists == 0)
+            if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10 && bulletsExists == 0 && buildModeOn == true)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
                 hit.collider.gameObject.GetComponent<Layout>().buildingObject.mode = mode;
@@ -154,6 +137,7 @@ public class BuildingController : MonoBehaviour
                 }
                
             }
+            
 
 
 

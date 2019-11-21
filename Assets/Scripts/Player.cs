@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     private GameObject objInHand;
 
     public static GameObject instance;
+
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
     // Start is called before the first frame update
 
 
@@ -72,5 +75,39 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+          
+            Fire();
+        }
+
+    }
+
+    public void Fire()
+    {
+        // Create the Bullet from the Bullet Prefab
+        var bullet = (GameObject)Instantiate(
+            bulletPrefab,
+            bulletSpawn.position,
+            bulletSpawn.rotation);
+
+        bullet.GetComponent<AudioSource>().Play();
+
+        gameObject.GetComponent<BuildingController>().bulletsExists += 1;
+
+        // Add velocity to the bullet
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+
+        // Destroy the bullet after 2 seconds
+        Destroy(bullet, 2.0f);
+
+        Invoke("destroyBullet", 2.0f);
+
+
+    }
+
+    private void destroyBullet()
+    {
+        gameObject.GetComponent<BuildingController>().bulletsExists -= 1;
     }
 }
