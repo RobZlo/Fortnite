@@ -45,13 +45,11 @@ public class Bomb : MonoBehaviour
                     }
                     else if (distance <= mediumAreaEffect)
                     {
-                        //50
-                        health.CalculateDamage(100);
+                        health.CalculateDamage(50);
                     }
                     else if (distance <= farAreaEffect)
                     {
-                        //20
-                        health.CalculateDamage(100);
+                        health.CalculateDamage(20);
                     }
                 }
             }
