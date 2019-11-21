@@ -20,55 +20,96 @@ public class BuildingController : MonoBehaviour
     public Image imageGround;
     public Image imageRamp;
     public Image imageWall;
-    private GameObject layoutContrainer;
+    private GameObject layoutContainer;
     private Vector3 layoutVector;
     private bool VectorSet = false;
-    private int modus = 0;
+    private int mode = 0;
+
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+    int bulletsExists = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         buildingObject = ground;
         layout = groundLayout;
-        modus = 0;
+        mode = 0;
         imageGround.color = Color.green;
+    }
+
+    //Takes care of the shooting mechanism
+
+    private void Fire()
+    {
+        // Create the Bullet from the Bullet Prefab
+        var bullet = (GameObject)Instantiate(
+            bulletPrefab,
+            bulletSpawn.position,
+            bulletSpawn.rotation);
+
+        bullet.GetComponent<AudioSource>().Play();
+
+        bulletsExists += 1;
+
+        // Add velocity to the bullet
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+
+        // Destroy the bullet after 2 seconds
+        Destroy(bullet, 2.0f);
+
+        Invoke("destroyBullet", 2.0f);
+        
+        
+    }
+
+    private void destroyBullet()
+    {
+        bulletsExists -= 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Condition which modus is activated to hitmark the image in the Panel
-        if(Input.GetKey(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            modus = 0;
+            Destroy(layoutContainer);
+            VectorSet = false;
+            Fire();
+        }
+
+        // Condition which modus is activated to hitmark the image in the Panel
+        if (Input.GetKey(KeyCode.F1))
+        {
+            mode = 0;
             imageGround.color = Color.green;
             imageRamp.color = Color.white;
             imageWall.color = Color.white;
             buildingObject = ground;
             layout = groundLayout;
-            Destroy(layoutContrainer);
+            Destroy(layoutContainer);
             VectorSet = false;
         }
         else if(Input.GetKey(KeyCode.F2))
         {
-            modus = 1;
+            mode = 1;
             imageGround.color = Color.white;
             imageRamp.color = Color.green;
             imageWall.color = Color.white;
             buildingObject = ramp;
             layout = rampLayout;
-            Destroy(layoutContrainer);
+            Destroy(layoutContainer);
             VectorSet = false;
         }
         else if (Input.GetKey(KeyCode.F3))
         {
-            modus = 2;
+            mode = 2;
             imageGround.color = Color.white;
             imageRamp.color = Color.white;
             imageWall.color = Color.green;
             buildingObject = wall;
             layout = wallLayout;
-            Destroy(layoutContrainer);
+            Destroy(layoutContainer);
             VectorSet = false;
         }
 
@@ -79,35 +120,39 @@ public class BuildingController : MonoBehaviour
         {
             if(hit.distance >= 10)
             {
-                Destroy(layoutContrainer);
+                Destroy(layoutContainer);
                 VectorSet = false;
             }
 
             if (layoutVector != hit.point && VectorSet)
             {
-                layoutContrainer.transform.position = hit.point;
-                layoutContrainer.transform.rotation = player.transform.rotation;
+                layoutContainer.transform.position = hit.point;
+                layoutContainer.transform.rotation = player.transform.rotation;
             }
-            if(hit.distance < 10 && !VectorSet)
+            if(hit.distance < 10 && !VectorSet  && bulletsExists == 0)
             {
-                layoutContrainer = Instantiate(layout, hit.point, player.transform.rotation);
+                layoutContainer = Instantiate(layout, hit.point, player.transform.rotation);
                 layoutVector = hit.point;
                 VectorSet = true;
             }
 
-            if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10)
+            if(hit.collider.gameObject.tag == "Layout" && hit.distance < 10 && bulletsExists == 0)
             {
                 hit.collider.gameObject.GetComponent<Layout>().tracked = true;
-                hit.collider.gameObject.GetComponent<Layout>().buildingObject.modus = modus;
-                Destroy(layoutContrainer);
+                hit.collider.gameObject.GetComponent<Layout>().buildingObject.mode = mode;
+                Destroy(layoutContainer);
                 VectorSet = false;
             }
 
             if(hit.distance < 10 && hit.collider.gameObject.tag == "BuildingObject")
             {
-                hit.collider.gameObject.GetComponent<BuildingObject>().modus = modus;
-                Destroy(layoutContrainer);
-                VectorSet = false;
+                if(hit.collider.gameObject.GetComponent<BuildingObject>() != null)
+                {
+                    hit.collider.gameObject.GetComponent<BuildingObject>().mode = mode;
+                    Destroy(layoutContainer);
+                    VectorSet = false;
+                }
+               
             }
 
 
@@ -122,7 +167,7 @@ public class BuildingController : MonoBehaviour
                 {
                     GameObject container;
                     
-                    if(modus == 2)
+                    if(mode == 2)
                     {
                         container = Instantiate(buildingObject, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
                         if(!hit.collider.gameObject.transform.parent.gameObject.name.Equals("Wall"))
@@ -139,13 +184,13 @@ public class BuildingController : MonoBehaviour
                 }
                 else
                 {
-                    if(modus == 1)
+                    if(mode == 1)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(0, 90, -45);
                         gameObjectInstance.transform.Translate(-2.5f, 0, 0);
                     }
-                    else if(modus == 2)
+                    else if(mode == 2)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(90, 0, 0);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingObject : MonoBehaviour
 {
-    public int modus = 0;
+    public int mode = 0;
     public GameObject layoutGround1;
     public GameObject layoutGround2;
     public GameObject layoutGround3;
@@ -36,7 +36,7 @@ public class BuildingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(modus)
+        switch(mode)
         {
             case 0: layoutGround1.SetActive(true);
                     layoutGround2.SetActive(true);
