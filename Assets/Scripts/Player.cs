@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+    public int bulletVelocity;
     // Start is called before the first frame update
 
 
@@ -96,7 +97,7 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<BuildingController>().bulletsExists += 1;
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletVelocity;
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
