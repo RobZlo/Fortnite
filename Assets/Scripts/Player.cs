@@ -47,23 +47,7 @@ public class Player : MonoBehaviour
             bomb.GetComponent<Rigidbody>().AddForce(cam.transform.forward * throwForce);
 
         }
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            RaycastHit hit;
-            Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-            Debug.DrawLine(ray.origin, ray.GetPoint(maxRange));
-            if (Physics.Raycast(ray, out hit, maxRange, interactionMask))
-            {
-                if (objInHand == null)
-                {
-                    objInHand = hit.transform.gameObject;
-                    objInHand.GetComponent<Rigidbody>().isKinematic = true;
-                    objInHand.transform.position = hand.position;
-                    objInHand.transform.parent = hand;
-                }
-            }
-        }
-       
+              
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (Time.timeScale == 1f)
