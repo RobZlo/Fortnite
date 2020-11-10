@@ -147,13 +147,13 @@ public class BuildingController : MonoBehaviour
 
 
 
-            if(Input.GetMouseButtonDown(0) && hit.distance < 10)
+            if(Input.GetMouseButtonDown(0) && hit.distance < 10 && buildModeOn == true)
             {
                 if(hit.collider.gameObject.tag == "BuildingObject")
                 {
 
                 }
-                else if(hit.collider.gameObject.tag == "Layout" && buildModeOn == true)
+                else if(hit.collider.gameObject.tag == "Layout")
                 {
                     GameObject container;
                     
@@ -174,13 +174,13 @@ public class BuildingController : MonoBehaviour
                 }
                 else
                 {
-                    if(mode == 1 && buildModeOn == true)
+                    if(mode == 1)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(0, 90, -45);
                         gameObjectInstance.transform.Translate(-2.5f, 0, 0);
                     }
-                    else if(mode == 2 && buildModeOn == true)
+                    else if(mode == 2)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(90, 0, 0);
@@ -188,10 +188,9 @@ public class BuildingController : MonoBehaviour
                     }
                     else
                     {
-                        if(buildModeOn == true)
-                        {
-                            Instantiate(buildingObject, hit.point, player.transform.rotation);
-                        }
+                        
+                        Instantiate(buildingObject, hit.point, player.transform.rotation);
+                        
                        
                     }
                 }
