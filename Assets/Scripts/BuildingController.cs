@@ -48,7 +48,10 @@ public class BuildingController : MonoBehaviour
             buildModeOn = false;
             Destroy(layoutContainer);
             VectorSet = false;
-         
+            imageGround.color = Color.white;
+            imageRamp.color = Color.white;
+            imageWall.color = Color.white;
+
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -56,6 +59,9 @@ public class BuildingController : MonoBehaviour
             buildModeOn = false;
             Destroy(layoutContainer);
             VectorSet = false;
+            imageGround.color = Color.white;
+            imageRamp.color = Color.white;
+            imageWall.color = Color.white;
         }
 
         // Condition which modus is activated to hitmark the image in the Panel
@@ -147,7 +153,7 @@ public class BuildingController : MonoBehaviour
                 {
 
                 }
-                else if(hit.collider.gameObject.tag == "Layout")
+                else if(hit.collider.gameObject.tag == "Layout" && buildModeOn == true)
                 {
                     GameObject container;
                     
@@ -168,13 +174,13 @@ public class BuildingController : MonoBehaviour
                 }
                 else
                 {
-                    if(mode == 1)
+                    if(mode == 1 && buildModeOn == true)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(0, 90, -45);
                         gameObjectInstance.transform.Translate(-2.5f, 0, 0);
                     }
-                    else if(mode == 2)
+                    else if(mode == 2 && buildModeOn == true)
                     {
                         GameObject gameObjectInstance = Instantiate(buildingObject, hit.point, player.transform.rotation);
                         gameObjectInstance.transform.Rotate(90, 0, 0);
@@ -182,7 +188,11 @@ public class BuildingController : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(buildingObject, hit.point, player.transform.rotation);
+                        if(buildModeOn == true)
+                        {
+                            Instantiate(buildingObject, hit.point, player.transform.rotation);
+                        }
+                       
                     }
                 }
             }
