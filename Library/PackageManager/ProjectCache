@@ -1,20 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Rob/Documents/Studium/Angewandte Informatik/7.Semester/Spieleentwicklung/Fortnite/Packages/manifest.json
+    m_FilePath: C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637405475845835225
-    m_Hash: 1721217079
+      ticks: 637406208504809704
+    m_Hash: 3951429668
   m_LockFileStatus:
-    m_FilePath: C:/Users/Rob/Documents/Studium/Angewandte Informatik/7.Semester/Spieleentwicklung/Fortnite/Packages/packages-lock.json
+    m_FilePath: C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637405475910867277
-    m_Hash: 808658595
+      ticks: 637406208504809704
+    m_Hash: 3136559471
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -126,7 +126,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.5.0
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ads@3.5.0
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ads@3.5.0
       assetPath: Packages/com.unity.ads
       name: com.unity.ads
       displayName: Advertisement
@@ -170,6 +170,12 @@ m_PackageAssets:
         - 3.3.0
         - 3.3.1
         - 3.4.0
+        - 3.4.1
+        - 3.4.2
+        - 3.4.4
+        - 3.4.5
+        - 3.4.7
+        - 3.4.9
         - 3.5.0
         compatible:
         - 0.0.3
@@ -200,6 +206,12 @@ m_PackageAssets:
         - 3.3.0
         - 3.3.1
         - 3.4.0
+        - 3.4.1
+        - 3.4.2
+        - 3.4.4
+        - 3.4.5
+        - 3.4.7
+        - 3.4.9
         - 3.5.0
         verified: 3.5.0
       dependencies:
@@ -227,7 +239,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637378601570000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -240,7 +252,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.5.3
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.analytics@3.5.3
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.analytics@3.5.3
       assetPath: Packages/com.unity.analytics
       name: com.unity.analytics
       displayName: Analytics Library
@@ -282,10 +294,12 @@ m_PackageAssets:
         - 3.1.1
         - 3.2.0
         - 3.2.2
+        - 3.2.3
         - 3.3.0
         - 3.3.2-preview
         - 3.3.2
         - 3.3.4
+        - 3.3.5
         - 3.4.0
         - 3.5.3
         compatible:
@@ -315,10 +329,12 @@ m_PackageAssets:
         - 3.1.1
         - 3.2.0
         - 3.2.2
+        - 3.2.3
         - 3.3.0
         - 3.3.2-preview
         - 3.3.2
         - 3.3.4
+        - 3.3.5
         - 3.4.0
         - 3.5.3
         verified: 3.5.3
@@ -347,7 +363,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637381916200000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -360,7 +376,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -387,17 +403,35 @@ m_PackageAssets:
         - 1.2.16
         - 1.2.17-preview.3
         - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
         - 1.3.9
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
         - 2.0.0-preview.17
+        - 2.0.0-preview.20
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.1.0-preview.3
+        - 2.1.0-preview.5
+        - 2.1.0-preview.6
         compatible:
         - 1.3.9
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
         - 2.0.0-preview.17
+        - 2.0.0-preview.20
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.1.0-preview.3
+        - 2.1.0-preview.5
+        - 2.1.0-preview.6
         verified: 1.3.9
       dependencies: []
       resolvedDependencies: []
@@ -424,7 +458,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637314349270000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -437,7 +471,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.rider@1.2.1
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -462,8 +496,18 @@ m_PackageAssets:
         - 1.1.2-preview
         - 1.1.2-preview.2
         - 1.1.3-preview.1
+        - 1.1.4-preview
         - 1.1.4
+        - 1.2.0-preview
         - 1.2.1
+        - 2.0.0-preview
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
+        - 2.0.7
+        - 3.0.1
+        - 3.0.2
         compatible:
         - 1.0.2
         - 1.0.6
@@ -473,8 +517,18 @@ m_PackageAssets:
         - 1.1.2-preview
         - 1.1.2-preview.2
         - 1.1.3-preview.1
+        - 1.1.4-preview
         - 1.1.4
+        - 1.2.0-preview
         - 1.2.1
+        - 2.0.0-preview
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
+        - 2.0.7
+        - 3.0.1
+        - 3.0.2
         verified: 1.2.1
       dependencies:
       - name: com.unity.test-framework
@@ -501,20 +555,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637123753810000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git@github.cds.internal.unity3d.com:unity/com.unity.ide.rider.git
-        revision: 038f7161a30add43d98b31fd686ade12ffb96adb
+        revision: 009bcadf1eb16d9bbf3d00bcf6ccdde2162ce0cb
         path: 
     - packageId: com.unity.ide.visualstudio@2.0.3
       testable: 0
       isDirectDependency: 1
       version: 2.0.3
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -531,10 +585,30 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
         - 2.0.3
+        - 2.0.5
         compatible:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
         - 2.0.3
-        verified: 2.0.3
+        - 2.0.5
+        verified: 2.0.5
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -550,7 +624,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637359495930000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -563,7 +637,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.2
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.vscode@1.2.2
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ide.vscode@1.2.2
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -586,7 +660,11 @@ m_PackageAssets:
         - 1.1.0
         - 1.1.2
         - 1.1.3
+        - 1.1.4
+        - 1.2.0
+        - 1.2.1
         - 1.2.2
+        - 1.2.3
         compatible:
         - 1.0.2
         - 1.0.3
@@ -594,8 +672,12 @@ m_PackageAssets:
         - 1.1.0
         - 1.1.2
         - 1.1.3
+        - 1.1.4
+        - 1.2.0
+        - 1.2.1
         - 1.2.2
-        verified: 1.2.2
+        - 1.2.3
+        verified: 1.2.3
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -611,7 +693,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637356850590000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -624,7 +706,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.1.0
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.probuilder@4.1.0
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.probuilder@4.1.0
       assetPath: Packages/com.unity.probuilder
       name: com.unity.probuilder
       displayName: ProBuilder
@@ -661,6 +743,20 @@ m_PackageAssets:
         - 4.1.0
         - 4.1.2
         - 4.2.1
+        - 4.2.2-preview.1
+        - 4.2.2-preview.2
+        - 4.2.3
+        - 4.2.4-preview.0
+        - 4.3.0-preview.0
+        - 4.3.0-preview.1
+        - 4.3.0-preview.2
+        - 4.3.0-preview.4
+        - 4.3.0-preview.6
+        - 4.3.0-preview.7
+        - 4.3.0-preview.8
+        - 4.3.0-preview.9
+        - 4.3.1
+        - 4.4.0-preview.1
         - 4.4.0
         compatible:
         - 4.0.2
@@ -670,6 +766,20 @@ m_PackageAssets:
         - 4.1.0
         - 4.1.2
         - 4.2.1
+        - 4.2.2-preview.1
+        - 4.2.2-preview.2
+        - 4.2.3
+        - 4.2.4-preview.0
+        - 4.3.0-preview.0
+        - 4.3.0-preview.1
+        - 4.3.0-preview.2
+        - 4.3.0-preview.4
+        - 4.3.0-preview.6
+        - 4.3.0-preview.7
+        - 4.3.0-preview.8
+        - 4.3.0-preview.9
+        - 4.3.1
+        - 4.4.0-preview.1
         - 4.4.0
         verified: 4.4.0
       dependencies:
@@ -724,7 +834,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.1.1
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.purchasing@2.1.1
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.purchasing@2.1.1
       assetPath: Packages/com.unity.purchasing
       name: com.unity.purchasing
       displayName: In App Purchasing
@@ -857,7 +967,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.18
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.test-framework@1.1.18
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -890,6 +1000,11 @@ m_PackageAssets:
         - 1.1.3
         - 1.1.5
         - 1.1.8
+        - 1.1.9
+        - 1.1.11
+        - 1.1.13
+        - 1.1.14
+        - 1.1.16
         - 1.1.18
         compatible:
         - 1.1.18
@@ -923,12 +1038,12 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637378481950000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: 14025b364215f4465cbe1beb7a81e486b2687ced
         path: 
     - packageId: com.unity.textmeshpro@3.0.1
@@ -936,7 +1051,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -992,15 +1107,56 @@ m_PackageAssets:
         - 1.4.1
         - 1.5.0-preview.1
         - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.0-preview.6
+        - 1.5.0-preview.7
+        - 1.5.0-preview.8
+        - 1.5.0-preview.10
+        - 1.5.0-preview.11
+        - 1.5.0-preview.12
+        - 1.5.0-preview.13
+        - 1.5.0-preview.14
+        - 1.5.0
+        - 1.5.1
+        - 1.5.3
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
         - 2.1.0-preview.1
         - 2.1.0-preview.2
+        - 2.1.0-preview.3
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 2.1.0-preview.7
+        - 2.1.0-preview.8
+        - 2.1.0-preview.10
+        - 2.1.0-preview.11
+        - 2.1.0-preview.12
+        - 2.1.0-preview.13
+        - 2.1.0-preview.14
+        - 2.1.0
+        - 2.1.1
+        - 2.1.3
+        - 3.0.0-preview.1
+        - 3.0.0-preview.3
+        - 3.0.0-preview.4
+        - 3.0.0-preview.5
+        - 3.0.0-preview.7
+        - 3.0.0-preview.8
+        - 3.0.0-preview.10
+        - 3.0.0-preview.11
+        - 3.0.0-preview.12
+        - 3.0.0-preview.13
+        - 3.0.0-preview.14
+        - 3.0.0
         - 3.0.1
+        - 3.0.3
         compatible:
         - 3.0.1
-        verified: 3.0.1
+        - 3.0.3
+        verified: 3.0.3
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -1029,7 +1185,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637314376320000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -1042,7 +1198,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.6
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.timeline@1.2.6
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.timeline@1.2.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1065,14 +1221,88 @@ m_PackageAssets:
         - 1.2.4
         - 1.2.5
         - 1.2.6
+        - 1.2.7
+        - 1.2.9
+        - 1.2.10
+        - 1.2.11
+        - 1.2.12
+        - 1.2.13
+        - 1.2.14
+        - 1.2.15
+        - 1.2.16
+        - 1.2.17
         - 1.3.0-preview.2
         - 1.3.0-preview.3
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
         - 1.3.6
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.5
+        - 1.4.0-preview.6
+        - 1.4.0-preview.7
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4
+        - 1.5.0-pre.2
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.1-pre.1
         compatible:
         - 1.2.6
+        - 1.2.7
+        - 1.2.9
+        - 1.2.10
+        - 1.2.11
+        - 1.2.12
+        - 1.2.13
+        - 1.2.14
+        - 1.2.15
+        - 1.2.16
+        - 1.2.17
         - 1.3.0-preview.2
         - 1.3.0-preview.3
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
         - 1.3.6
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.5
+        - 1.4.0-preview.6
+        - 1.4.0-preview.7
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4
+        - 1.5.0-pre.2
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.1-pre.1
         verified: 1.3.6
       dependencies: []
       resolvedDependencies: []
@@ -1170,7 +1400,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.1.4
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.4
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.4
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -1200,10 +1430,15 @@ m_PackageAssets:
         - 1.3.6
         - 1.3.7
         - 1.3.8
+        - 1.3.11
         - 2.0.1
         - 2.0.2
         - 2.0.4
         - 2.0.6
+        - 2.0.8
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
         - 2.1.4
         compatible:
         - 2.1.4
@@ -1228,7 +1463,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637244797630000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2983,7 +3218,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ext.nunit@1.0.0
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3040,7 +3275,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\Rob\Documents\Studium\Angewandte Informatik\7.Semester\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.settings-manager@1.0.0
+      resolvedPath: C:\Users\Robert\Documents\Studium\Spieleentwicklung\Fortnite\Library\PackageCache\com.unity.settings-manager@1.0.0
       assetPath: Packages/com.unity.settings-manager
       name: com.unity.settings-manager
       displayName: Settings Manager
@@ -3060,12 +3295,14 @@ m_PackageAssets:
         - 0.1.0-preview.8
         - 1.0.0
         - 1.0.1
+        - 1.0.2
         - 1.0.3
         compatible:
         - 0.1.0-preview.4
         - 0.1.0-preview.8
         - 1.0.0
         - 1.0.1
+        - 1.0.2
         - 1.0.3
         verified: 1.0.3
       dependencies: []
@@ -3093,5 +3330,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Rob/Documents/Studium/Angewandte Informatik/7.Semester/Spieleentwicklung/Fortnite/Packages
+m_ProjectPath: C:/Users/Robert/Documents/Studium/Spieleentwicklung/Fortnite/Packages
 m_EditorVersion: 2020.1.12f1 (55b56f0a86e3)
