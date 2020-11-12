@@ -31,17 +31,16 @@ public class HealthEnemy : MonoBehaviour
     {
         if(healthAmount <= 0)
         {
-            Destroy(gameObject);
+            Animator anim = gameObject.GetComponent<Animator>();
+
+            anim.Play("Dying");
+            //Destroy(gameObject);
         }
     }
 
     public void CalculateDamage(float amount)
     {
-        healthAmount -= amount;
-        if (healthAmount <= 0)
-        {
-            Destroy(gameObject);
-        }
+        healthAmount -= amount;          
     }
 
 
