@@ -10,6 +10,9 @@ TagManager:
   - BuildingObject
   - Tree
   - Floor
+  - Bullet
+  - Bomb
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -41,17 +41,37 @@ public class Bomb : MonoBehaviour
                     // collider takes damage depending on the distance
                     if (distance <= closeAreaEffect)
                     {
-                        health.CalculateDamage(100);
+                        health.CalculateDamage(1);
                     }
                     else if (distance <= mediumAreaEffect)
                     {
-                        health.CalculateDamage(50);
+                        health.CalculateDamage(0.5f);
                     }
                     else if (distance <= farAreaEffect)
                     {
-                        health.CalculateDamage(20);
+                        health.CalculateDamage(0.2f);
                     }
                 }
+            }
+            else if (c.gameObject.tag == "Enemy")
+            {
+                float distance = Vector3.Distance(c.transform.position, transform.position);
+                var health = c.GetComponent<HealthEnemy>();
+                
+                    // collider takes damage depending on the distance
+                    if (distance <= closeAreaEffect)
+                    {
+                        health.CalculateDamage(1);
+                    }
+                    else if (distance <= mediumAreaEffect)
+                    {
+                        health.CalculateDamage(0.5f);
+                    }
+                    else if (distance <= farAreaEffect)
+                    {
+                        health.CalculateDamage(0.2f);
+                    }
+                
             }
             else if (c.GetComponent<Rigidbody>() != null)
             {
@@ -72,4 +92,5 @@ public class Bomb : MonoBehaviour
         Destroy(explosionEffectInstance);
         Destroy(gameObject);
     }
+
 }

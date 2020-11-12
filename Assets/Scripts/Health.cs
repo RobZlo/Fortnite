@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-    public const int maxHealth = 100;
-    public int currentHealth = maxHealth;
+    public float healthAmount;
 
-    public void CalculateDamage(int amount)
+    void Start()
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
+        healthAmount = 1;
+    }
+
+    public void CalculateDamage(float amount)
+    {
+        healthAmount -= amount;
+        if (healthAmount <= 0)
         {
-            currentHealth = 0;
             Destroy(gameObject);
         }
     }

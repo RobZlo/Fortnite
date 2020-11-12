@@ -1,0 +1,48 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HealthEnemy : MonoBehaviour
+{
+    private float healthAmount;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        healthAmount = 1;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        CheckHealth();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Bullet"))
+        {
+            healthAmount -= 0.5f;
+        }
+
+    }
+
+    private void CheckHealth()
+    {
+        if(healthAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void CalculateDamage(float amount)
+    {
+        healthAmount -= amount;
+        if (healthAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+}

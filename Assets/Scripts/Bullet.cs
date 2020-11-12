@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
         if (health != null)
         {
             // it takes 5 bullets to destroy an object
-            health.CalculateDamage(20);
+            health.CalculateDamage(0.2f);
         }
         Destroy(gameObject);
     }
