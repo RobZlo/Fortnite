@@ -5,10 +5,12 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private float healthAmount;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         healthAmount = 1;
     }
 
@@ -23,6 +25,11 @@ public class EnemyController : MonoBehaviour
         if(other.CompareTag("Bullet"))
         {
             healthAmount -= 0.5f;
+            
+            if(healthAmount > 0)
+            {
+                animator.Play("Standing React Large Gut");
+            }
             CheckHealth();
         }
 
@@ -45,9 +52,8 @@ public class EnemyController : MonoBehaviour
 
     public void Die()
     {
-        Animator anim = gameObject.GetComponent<Animator>();
         gameObject.GetComponent<FollowPlayer>().enabled = false;
-        anim.Play("Dying");
+        animator.Play("Dying");
     }
 
 
