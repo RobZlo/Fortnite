@@ -20,12 +20,18 @@ public class Player : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public int bulletVelocity;
+    private float healthAmount;
+    private Animator animator;
+    public bool alive;
     // Start is called before the first frame update
 
 
     void Awake()
     {
+        alive = true;
+        healthAmount = 1f;
         Player.instance = gameObject;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -94,5 +100,31 @@ public class Player : MonoBehaviour
     private void destroyBullet()
     {
         gameObject.GetComponent<BuildingController>().bulletsExists -= 1;
+    }
+
+    private void CheckHealth()
+    {
+        if (healthAmount <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void CalculateDamage(float amount)
+    {
+        healthAmount -= amount;
+
+        if (healthAmount > 0)
+        {
+            animator.Play("Standing React Large Gut");
+        }
+        CheckHealth();
+    }
+
+    public void Die()
+    {
+        alive = false;
+        gameObject.GetComponent<Player>().enabled = false;
+        animator.Play("Dying");
     }
 }

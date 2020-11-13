@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     private float healthAmount;
     private Animator animator;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        AttackIfPlayerNearby();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +33,6 @@ public class EnemyController : MonoBehaviour
             }
             CheckHealth();
         }
-
 
     }
 
@@ -54,6 +54,34 @@ public class EnemyController : MonoBehaviour
     {
         gameObject.GetComponent<FollowPlayer>().enabled = false;
         animator.Play("Dying");
+    }
+
+    public void EndAttack()
+    {
+        var dist = Vector3.Distance(player.transform.position, gameObject.transform.position);
+
+        if(dist <= 1)
+        {
+            player.GetComponent<Player>().CalculateDamage(0.5f);
+        }
+    }
+
+    private void AttackIfPlayerNearby()
+    {
+        var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+        if(dist <= 1 && player.GetComponent<Player>().alive == true)
+        {
+            animator.Play("Standing Melee Attack Downward");
+        }
+    }
+
+    private void StopAttack()
+    {
+        var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+        if (dist > 1 || player.GetComponent<Player>().alive == false)
+        {
+            animator.Rebind();
+        }
     }
 
 

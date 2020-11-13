@@ -54864,7 +54864,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -54884,6 +54884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16795b57de76cb347bb1c9fa1d3092a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1772571646}
 --- !u!114 &1613605717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54891,7 +54892,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613605709}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e71b1bad34c78248adf436da22e46dd, type: 3}
   m_Name: 
@@ -68571,6 +68572,7 @@ MonoBehaviour:
     type: 3}
   bulletSpawn: {fileID: 559697364}
   bulletVelocity: 30
+  alive: 0
 --- !u!1001 &1773466807
 PrefabInstance:
   m_ObjectHideFlags: 0
