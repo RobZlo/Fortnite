@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         AttackIfPlayerNearby();
+        healthBarUI.gameObject.transform.rotation = player.transform.rotation;
 
     }
 
