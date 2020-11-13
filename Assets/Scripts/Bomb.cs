@@ -56,20 +56,20 @@ public class Bomb : MonoBehaviour
             else if (c.gameObject.tag == "Enemy")
             {
                 float distance = Vector3.Distance(c.transform.position, transform.position);
-                var health = c.GetComponent<HealthEnemy>();
+                var enemyController = c.GetComponent<EnemyController>();
                 
                     // collider takes damage depending on the distance
                     if (distance <= closeAreaEffect)
                     {
-                        health.CalculateDamage(1);
+                        enemyController.CalculateDamage(1);
                     }
                     else if (distance <= mediumAreaEffect)
                     {
-                        health.CalculateDamage(0.5f);
+                        enemyController.CalculateDamage(0.5f);
                     }
                     else if (distance <= farAreaEffect)
                     {
-                        health.CalculateDamage(0.2f);
+                        enemyController.CalculateDamage(0.2f);
                     }
                 
             }
