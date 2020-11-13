@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void CalculateDamage(float amount)
+    public void CalculateHealth(float amount)
     {
         healthAmount -= amount;
 

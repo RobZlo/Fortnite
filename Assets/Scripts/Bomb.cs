@@ -61,15 +61,15 @@ public class Bomb : MonoBehaviour
                     // collider takes damage depending on the distance
                     if (distance <= closeAreaEffect)
                     {
-                        enemyController.CalculateDamage(1);
+                        enemyController.CalculateHealth(1f);
                     }
                     else if (distance <= mediumAreaEffect)
                     {
-                        enemyController.CalculateDamage(0.5f);
+                        enemyController.CalculateHealth(0.5f);
                     }
                     else if (distance <= farAreaEffect)
                     {
-                        enemyController.CalculateDamage(0.2f);
+                        enemyController.CalculateHealth(0.2f);
                     }
                 
             }
