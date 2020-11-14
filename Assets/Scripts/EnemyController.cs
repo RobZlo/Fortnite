@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     private float healthAmount;
     private float maxHealth;
     private Animator animator;
-    public GameObject player;
+    private GameObject player;
 
     public GameObject healthBarUI;
     public Slider slider;
@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         alive = true;
         animator = gameObject.GetComponent<Animator>();
         maxHealth = 1;

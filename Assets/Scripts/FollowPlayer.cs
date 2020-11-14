@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private NavMeshAgent agent;
     Animator animator;
     public ThirdPersonCharacter character;
@@ -14,7 +14,7 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         if (animator)
