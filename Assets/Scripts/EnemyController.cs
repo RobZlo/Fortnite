@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
     {
         AttackIfPlayerNearby();
         healthBarUI.gameObject.transform.rotation = player.transform.rotation;
+        CheckPlayerDistance();
 
     }
 
@@ -68,8 +69,19 @@ public class EnemyController : MonoBehaviour
     {
         alive = false;
         //healthBarUI.SetActive(false);
-        gameObject.GetComponent<FollowPlayer>().enabled = false;
+        DisableFollowPlayer();
+        DisableRandomMovement();
         animator.Play("Dying");
+    }
+
+    private void DisableFollowPlayer()
+    {
+        gameObject.GetComponent<FollowPlayer>().enabled = false;
+    }
+
+    private void DisableRandomMovement()
+    {
+        gameObject.GetComponent<RandomMovement>().enabled = false;
     }
 
     public void EndAttack()
@@ -123,6 +135,27 @@ public class EnemyController : MonoBehaviour
         }
         
         healthBarUI.SetActive(false);
+    }
+
+    private void CheckPlayerDistance()
+    {
+        var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+        if(dist <= 10)
+        {
+            gameObject.GetComponent<FollowPlayer>().enabled = true;
+            gameObject.GetComponent<RandomMovement>().enabled = false;
+        }
+        else
+        {
+            if (gameObject.GetComponent<FollowPlayer>().enabled == true)
+            {
+                gameObject.GetComponent<FollowPlayer>().enabled = false;
+            }
+            if(gameObject.GetComponent<RandomMovement>().enabled == false)
+            {
+                gameObject.GetComponent<RandomMovement>().enabled = true;
+            }
+        }
     }
 
 

@@ -127,4 +127,9 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<Player>().enabled = false;
         animator.Play("Dying");
     }
+
+    void EndReact()
+    {
+        animator.Rebind();
+    }
 }
