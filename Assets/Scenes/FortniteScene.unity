@@ -67807,12 +67807,17 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1772571646}
+      objectReference: {fileID: 1772571652}
     - target: {fileID: 8578123818217472451, guid: d33eb8db96095b14e859cee171b8d13c,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1772571652}
+    - target: {fileID: 8578123818217472452, guid: d33eb8db96095b14e859cee171b8d13c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8578123818217472454, guid: d33eb8db96095b14e859cee171b8d13c,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -67822,6 +67827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Speed
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578123818217472455, guid: d33eb8db96095b14e859cee171b8d13c,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33eb8db96095b14e859cee171b8d13c, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,20 +10,34 @@ public class EnemyController : MonoBehaviour
     private float maxHealth;
     private Animator animator;
     private GameObject player;
+    private Player playerScript;
+    private GameObject cam;
 
     public GameObject healthBarUI;
     public Slider slider;
     private bool alive;
+    private bool hitReact;
+    private FollowPlayer followPlayer;
+    private RandomMovement randomMovement;
+    private EnemyController enemyController;
+    private NavMeshAgent navMeshAgent;
 
     // Start is called before the first frame update
     void Start()
     {
+        navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+        followPlayer = gameObject.GetComponent<FollowPlayer>();
+        randomMovement = gameObject.GetComponent<RandomMovement>();
+        enemyController = gameObject.GetComponent<EnemyController>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
         player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Player>();
         alive = true;
         animator = gameObject.GetComponent<Animator>();
         maxHealth = 1;
         healthAmount = maxHealth;
         slider.value = healthAmount;
+        hitReact = false;
 
     }
 
@@ -30,9 +45,14 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         AttackIfPlayerNearby();
-        healthBarUI.gameObject.transform.rotation = player.transform.rotation;
+        SetSliderRotation();
         CheckPlayerDistance();
 
+    }
+
+    private void SetSliderRotation()
+    {
+        healthBarUI.gameObject.transform.rotation = cam.transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,6 +63,8 @@ public class EnemyController : MonoBehaviour
             
             if(healthAmount > 0)
             {
+                hitReact = true;
+                navMeshAgent.enabled = false;
                 animator.Play("Standing React Large Gut");
             }
             CheckHealth();
@@ -69,20 +91,16 @@ public class EnemyController : MonoBehaviour
     public void Die()
     {
         alive = false;
-        //healthBarUI.SetActive(false);
-        DisableFollowPlayer();
-        DisableRandomMovement();
+        DeactivateControlScripts();
         animator.Play("Dying");
     }
 
-    private void DisableFollowPlayer()
+    private void DeactivateControlScripts()
     {
-        gameObject.GetComponent<FollowPlayer>().enabled = false;
-    }
-
-    private void DisableRandomMovement()
-    {
-        gameObject.GetComponent<RandomMovement>().enabled = false;
+        followPlayer.enabled = false;
+        randomMovement.enabled = false;
+        enemyController.enabled = false;
+        navMeshAgent.enabled = false;
     }
 
     public void EndAttack()
@@ -91,15 +109,18 @@ public class EnemyController : MonoBehaviour
 
         if(dist <= 1)
         {
-            player.GetComponent<Player>().CalculateHealth(0.5f);
+            playerScript.CalculateHealth(0.5f);
         }
     }
 
     private void AttackIfPlayerNearby()
     {
         var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-        if(dist <= 1 && player.GetComponent<Player>().alive == true)
+        var playerAlive = playerScript.alive;
+
+        if (dist <= 1 && playerAlive == true && hitReact == false)
         {
+            navMeshAgent.enabled = false;
             animator.Play("Standing Melee Attack Downward");
         }
     }
@@ -107,7 +128,10 @@ public class EnemyController : MonoBehaviour
     private void StopAttack()
     {
         var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-        if (dist > 1 || player.GetComponent<Player>().alive == false)
+        var playerAlive = playerScript.alive;
+        navMeshAgent.enabled = true;
+
+        if (dist > 1 || playerAlive == false)
         {
             animator.Rebind();
         }
@@ -116,6 +140,8 @@ public class EnemyController : MonoBehaviour
     private void EndReact()
     {
         animator.Rebind();
+        navMeshAgent.enabled = true;
+        hitReact = false;
     }
 
     IEnumerator AnimateSlider()
@@ -140,24 +166,25 @@ public class EnemyController : MonoBehaviour
 
     private void CheckPlayerDistance()
     {
+        bool playerAlive = playerScript.alive;
         var dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-        if(dist <= 10)
+
+        if(dist <= 10 && playerAlive)
         {
-            gameObject.GetComponent<FollowPlayer>().enabled = true;
-            gameObject.GetComponent<RandomMovement>().enabled = false;
+            followPlayer.enabled = true;
+            randomMovement.enabled = false;
         }
         else
-        {
-            if (gameObject.GetComponent<FollowPlayer>().enabled == true)
+        { 
+            if (followPlayer.enabled == true)
             {
-                gameObject.GetComponent<FollowPlayer>().enabled = false;
+                followPlayer.enabled = false;
             }
-            if(gameObject.GetComponent<RandomMovement>().enabled == false)
+            if(randomMovement.enabled == false)
             {
-                gameObject.GetComponent<RandomMovement>().enabled = true;
+                randomMovement.enabled = true;
             }
         }
     }
-
 
 }

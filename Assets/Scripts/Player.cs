@@ -93,8 +93,6 @@ public class Player : MonoBehaviour
         Destroy(bullet, 2.0f);
 
         Invoke("destroyBullet", 2.0f);
-
-
     }
 
     private void destroyBullet()
