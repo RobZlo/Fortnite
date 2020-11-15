@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     private float healthAmount;
     private Animator animator;
     public bool alive;
+    public Slider slider;
     // Start is called before the first frame update
 
 
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
         healthAmount = 1f;
         Player.instance = gameObject;
         animator = gameObject.GetComponent<Animator>();
+        slider.value = healthAmount;
     }
 
     // Update is called once per frame
@@ -111,6 +114,7 @@ public class Player : MonoBehaviour
     public void CalculateHealth(float amount)
     {
         healthAmount -= amount;
+        slider.value = healthAmount;
 
         if (healthAmount > 0)
         {

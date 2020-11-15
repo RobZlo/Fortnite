@@ -40,13 +40,12 @@ public class RandomMovement : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= wanderTimer)
+        if (timer >= wanderTimer && agent.enabled == true)
         {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             timer = 0;
         }
-        //animator.SetFloat("Forward", agent.desiredVelocity.magnitude);
 
         Movement();
     }
@@ -66,7 +65,7 @@ public class RandomMovement : MonoBehaviour
 
     void Movement()
     {
-        if (animator != null)
+        if (animator != null && agent.enabled == true)
         {
             if (agent.remainingDistance > agent.stoppingDistance)
             {

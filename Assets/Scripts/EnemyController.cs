@@ -97,10 +97,10 @@ public class EnemyController : MonoBehaviour
 
     private void DeactivateControlScripts()
     {
-        followPlayer.enabled = false;
-        randomMovement.enabled = false;
-        enemyController.enabled = false;
         navMeshAgent.enabled = false;
+        randomMovement.enabled = false;
+        followPlayer.enabled = false;
+        enemyController.enabled = false;
     }
 
     public void EndAttack()
