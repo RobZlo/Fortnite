@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Invector.CharacterController;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,13 @@ public class Player : MonoBehaviour
     private Animator animator;
     public bool alive;
     public Slider slider;
+    private vThirdPersonController vThirdPersonController;
     // Start is called before the first frame update
 
 
     void Awake()
     {
+        vThirdPersonController = gameObject.GetComponent<vThirdPersonController>();
         alive = true;
         healthAmount = 1f;
         Player.instance = gameObject;
@@ -118,6 +121,7 @@ public class Player : MonoBehaviour
 
         if (healthAmount > 0)
         {
+            vThirdPersonController.enabled = false;
             animator.Play("Standing React Large Gut");
         }
         CheckHealth();
@@ -125,13 +129,16 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        healthAmount = 0f;
         alive = false;
         gameObject.GetComponent<Player>().enabled = false;
+        vThirdPersonController.enabled = false;
         animator.Play("Dying");
     }
 
     void EndReact()
     {
+        vThirdPersonController.enabled = true;
         animator.Rebind();
     }
 }

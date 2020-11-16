@@ -76,6 +76,7 @@ public class EnemyController : MonoBehaviour
     {
         if(healthAmount <= 0)
         {
+            healthAmount = 0f;
             Die();
         }
     }
