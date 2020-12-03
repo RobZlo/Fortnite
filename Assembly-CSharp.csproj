@@ -96,6 +96,7 @@
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
      <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+     <None Include="Assets\Surfaces Lite\Demo Scene\Data\Read Me!.txt" />
      <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <Reference Include="UnityEngine">
