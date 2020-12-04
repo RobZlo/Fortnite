@@ -96,9 +96,9 @@ public class Player : MonoBehaviour
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletVelocity;
 
         // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
+        Destroy(bullet, 3.0f);
 
-        Invoke("destroyBullet", 2.0f);
+        Invoke("destroyBullet", 3.0f);
     }
 
     private void destroyBullet()

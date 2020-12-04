@@ -55,35 +55,27 @@ public class EnemyController : MonoBehaviour
         healthBarUI.gameObject.transform.rotation = cam.transform.rotation;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Bullet"))
-        {
-            CalculateHealth(0.5f);
-            
-            if(healthAmount > 0)
-            {
-                hitReact = true;
-                navMeshAgent.enabled = false;
-                animator.Play("Standing React Large Gut");
-            }
-            CheckHealth();
-        }
-
-    }
 
     private void CheckHealth()
     {
-        if(healthAmount <= 0)
+        if (healthAmount > 0.2)
+        {
+            hitReact = true;
+            navMeshAgent.enabled = false;
+            animator.Play("Standing React Large Gut");
+        }
+        if (healthAmount <= 0.2)
         {
             healthAmount = 0f;
             Die();
         }
+       
     }
 
     public void CalculateHealth(float amount)
     {
         healthAmount -= amount;
+        Debug.Log("" + healthAmount);
         CheckHealth();
         StartCoroutine("AnimateSlider");
         

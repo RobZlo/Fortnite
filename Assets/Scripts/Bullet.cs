@@ -8,12 +8,30 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var hit = collision.gameObject;
-        var health = hit.GetComponent<Health>();
-        if (health != null)
+        if (hit.CompareTag("Enemy"))
         {
-            // it takes 5 bullets to destroy an object
-            health.CalculateDamage(0.2f);
+            Debug.Log("Hit Tag");
+
+            var enemyController = hit.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                enemyController.CalculateHealth(0.2f);
+            }
         }
-        Destroy(gameObject);
+        else
+        {
+            var health = hit.GetComponent<Health>();
+            if (health != null)
+            {
+                // it takes 5 bullets to destroy an object
+                health.CalculateDamage(0.5f);
+            }
+        }
+
+        gameObject.GetComponent<SphereCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+       
+        
+
     }
 }

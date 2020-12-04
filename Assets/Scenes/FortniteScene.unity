@@ -4782,7 +4782,7 @@ RectTransform:
   m_GameObject: {fileID: 277381515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3351184, y: 0.3351184, z: 0.3351184}
   m_Children:
   - {fileID: 1249564360}
   - {fileID: 1530590446}
@@ -4792,7 +4792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -229.1, y: 77.3}
+  m_AnchoredPosition: {x: -75, y: 28}
   m_SizeDelta: {x: 413.1, y: 133.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277381517
@@ -14374,7 +14374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -27824,7 +27824,7 @@ RectTransform:
   m_GameObject: {fileID: 1080893570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0178804, y: 3.039361, z: 1.4296}
+  m_LocalScale: {x: 0.818977, y: 0.9473703, z: 0.5802175}
   m_Children:
   - {fileID: 283960069}
   - {fileID: 371248338}
@@ -27834,7 +27834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -773.3, y: -499.4}
+  m_AnchoredPosition: {x: -330, y: -209}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080893572
@@ -43157,7 +43157,7 @@ RectTransform:
   m_GameObject: {fileID: 1614002858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.42292, y: 0.42292, z: 0.42292}
   m_Children: []
   m_Father: {fileID: 667792305}
   m_RootOrder: 0
@@ -66482,7 +66482,7 @@ GameObject:
   - component: {fileID: 1613605710}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120050,7 +120050,7 @@ GameObject:
   - component: {fileID: 8578123818470698660}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120074,7 +120074,7 @@ GameObject:
   - component: {fileID: 8578123818432080252}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120098,7 +120098,7 @@ GameObject:
   - component: {fileID: 8578123818443668533}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120122,7 +120122,7 @@ GameObject:
   - component: {fileID: 8578123818021843226}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120146,7 +120146,7 @@ GameObject:
   - component: {fileID: 8578123818203547859}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120170,7 +120170,7 @@ GameObject:
   - component: {fileID: 8578123818212017812}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120194,7 +120194,7 @@ GameObject:
   - component: {fileID: 8578123817782235051}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120218,7 +120218,7 @@ GameObject:
   - component: {fileID: 8578123817788196036}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120242,7 +120242,7 @@ GameObject:
   - component: {fileID: 8578123817748028808}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120266,7 +120266,7 @@ GameObject:
   - component: {fileID: 8578123817726480389}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120290,7 +120290,7 @@ GameObject:
   - component: {fileID: 8578123817525315595}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120314,7 +120314,7 @@ GameObject:
   - component: {fileID: 8578123817499320264}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120338,7 +120338,7 @@ GameObject:
   - component: {fileID: 8578123817150137329}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120362,7 +120362,7 @@ GameObject:
   - component: {fileID: 8578123816890803147}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120386,7 +120386,7 @@ GameObject:
   - component: {fileID: 8578123817068741671}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120410,7 +120410,7 @@ GameObject:
   - component: {fileID: 8578123816730080527}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120434,7 +120434,7 @@ GameObject:
   - component: {fileID: 8578123816658263354}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120458,7 +120458,7 @@ GameObject:
   - component: {fileID: 8578123816624090877}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120482,7 +120482,7 @@ GameObject:
   - component: {fileID: 8578123816361723071}
   m_Layer: 0
   m_Name: Ch45_nonPBR@Dying
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
